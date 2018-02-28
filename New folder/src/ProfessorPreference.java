@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 
 public class ProfessorPreference {
-	ClassInfo[] preferences;
+	ClassInfo[] preferences;		//just a set of classes, times, wanting to teach
+	int[] conflicts;				//a set of ints (Course ID's) the professor thinks
 	
 	ProfessorPreference(ClassInfo[] p){
 		this.preferences = p;

@@ -1,20 +1,36 @@
 
 public class ClassInfo {
-	int courseID;			//CRS ID for the course
-	int roomID;				//Room Number, modified for wings and buildings.
-	CourseTimes classTime; //should have two or three values for each day
-							//class is held
-							//as an example:
-							//{0, 1300, 1390}, {2, 1300, 1390}, {4, 1300, 1390} 
-							// is mon wed fri 1:00 to 1:50.
+	Integer courseID;			//ID for the course, going from 0 to N-1 for N classes
+	Integer roomID;				//Room Number, modified for wings and buildings.
+	CourseTimes classTime;  //values for class times and days
 	String instructor; 		//instructors name
 	boolean isLab;			//is this a lab?
 	
-	ClassInfo(int cID, int rID, CourseTimes cT, String in, boolean lab){
+	ClassInfo(Integer cID, Integer rID, CourseTimes cT, String in, boolean lab){
 		this.courseID = cID;
 		this.roomID = rID;
 		this.classTime = cT;
 		this.instructor = in;
 		this.isLab = lab;
+	}
+	
+	Integer getCourseID(){
+		return this.courseID;
+	}
+	
+	Integer getRoomID() {	
+		return this.roomID;
+	}
+	
+	CourseTimes getClassTimes() {
+		return this.classTime;
+	}
+	
+	String getInstructor() {
+		return this.instructor;
+	}
+	
+	boolean isLab() {
+		return this.isLab;
 	}
 }
